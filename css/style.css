@@ -1,0 +1,224 @@
+/* Define estilos padrão para todos os elementos da página */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+/* Estilos para o contêiner principal */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para o cabeçalho (header) */
+.header {
+  background-color: #292929;
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 8px 15px;
+}
+
+/* Estilos para a logo na barra de navegação */
+.logoNavBar {
+  width: 250px;
+}
+
+/* Estilos para o grupo de botões no cabeçalho */
+.headerBtnGroup {
+  display: flex;
+  gap: 15px;
+}
+
+/* Estilos para os botões de navegação */
+.navBtn {
+  font-size: 16px;
+  padding: 6px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: white;
+  cursor: pointer;
+}
+
+/* Estilos para os botões de navegação quando passar o mouse sobre eles */
+.navBtn:hover {
+  border-bottom: 2px solid black;
+}
+
+/* Estilos para o título da seção */
+.sectionTitle {
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* Estilos para a descrição da seção */
+.sectionDescription {
+  text-align: center;
+  color: #383838;
+}
+
+/* Estilos para o contêiner da grade (grid) */
+.gridContainer {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "mainContent sidebarContent";
+  padding: 20px;
+  flex: 1 0 auto;
+}
+
+/* Estilos para o conteúdo principal */
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  grid-area: mainContent;
+}
+
+/* Estilos para os cartões de categoria */
+.categoryCard {
+  width: 280px;
+  height: 380px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* Estilos para a imagem dentro dos cartões de categoria */
+.maincardImg {
+  height: 180px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Estilos para os cartões de categoria quando passar o mouse sobre eles */
+.categoryCard:hover {
+  border-color: black;
+}
+
+/* Estilos para o título dentro dos cartões de categoria */
+.mainCategoryCardTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 6px;
+}
+
+/* Estilos para a descrição dentro dos cartões de categoria */
+.mainCategoryCardDescription {
+  padding-top: 6px;
+}
+
+/* Estilos para o conteúdo da barra lateral (sidebar) */
+.sidebarContent {
+  background-color: #383838;
+  color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  grid-area: sidebarContent;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+/* Estilos para os cartões na barra lateral */
+.sidebarCard {
+  width: 75%;
+  border: 1px solid transparent;
+  transition: 0.5s;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Estilos para a imagem dentro dos cartões na barra lateral */
+.sidebarCardImg {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Estilos para os cartões na barra lateral quando passar o mouse sobre eles */
+.sidebarCard:hover {
+  border-color: gainsboro;
+}
+
+/* Estilos para o rodapé (footer) */
+.footer {
+  background-color: #292929;
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 8px 15px;
+}
+
+/* Estilos para a logo no rodapé */
+.logoFooter {
+  width: 250px;
+}
+
+/* Estilos para os links no rodapé */
+.footerAnchor {
+  color: white;
+  text-decoration: none;
+}
+
+/* Estilos para telas menores (max-width: 1200px) */
+@media (max-width: 1200px) {
+  /* Faz ajustes no conteúdo da barra lateral */
+  .sidebarContent {
+    margin-bottom: auto;
+  }
+}
+
+/* Estilos para telas menores (max-width: 630px) */
+@media (max-width: 630px) {
+  /* Reorganiza a grade para uma única coluna */
+  .gridContainer {
+    grid-template-areas:
+      "mainContent"
+      "sidebarContent";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Remove a largura mínima da barra lateral */
+  .sidebarContent {
+    min-width: auto;
+  }
+
+  /* Ajusta o tamanho da fonte dos links no rodapé */
+  .footerAnchor {
+    font-size: 16px;
+  }
+}
+
+/* Estilos para telas menores (max-width: 528px) */
+@media (max-width: 528px) {
+  /* Centraliza o conteúdo no cabeçalho */
+  .header {
+    justify-content: center;
+  }
+}
+
+/* Estilos para telas menores (max-width: 487px) */
+@media (max-width: 487px) {
+  /* Centraliza o conteúdo no rodapé */
+  .footer {
+    justify-content: center;
+  }
+}
